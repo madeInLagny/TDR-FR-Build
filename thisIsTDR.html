@@ -41,7 +41,45 @@
         display: flex;
         align-items: center;
         gap: 0.5em;
-      }</style><body class="stretched block-nav-header"><div id="wrapper" class="fitsHeight"><header id="header" class="header-size-md"><div id="header-wrap" class="border-bottom-0"><div class="container position-relative"><div class="header-row justify-content-center"><div class="primary-menu-trigger"><button class="cnvs-hamburger" type="button" title="Open Mobile Menu">Menu <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span></button></div><nav class="primary-menu"><ul class="menu-container"><li class="menu-item current"><a class="menu-link" href="/"><div>Visit TradeDutyRefund.com</div></a><li class="menu-item"><a href class="menu-link" onclick="sharePresentation()"><div>Share This Presentation</div></a><li class="menu-item"><a class="menu-link" href="https://zcal.co/i/ipvlgNrr"><div>Schedule a discovery call</div></a><li class="menu-item"><a class="menu-link" href="https://www.linkedin.com/company/trade-duty-refund"><div>Follow us on LinkedIn</div></a></li><div class="morph-marker"></div></ul></nav></div></div></div><div class="header-wrap-clone"></div></header><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSEbN-x51HgNqkU2mUQ-Y-DLzrJBoXeznGZIG0UKTwtidgwsT4qw-eOpYCYV5kwZErFvF1jKi4IzwhC/embed?start=false&loop=false&delayms=60000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><script src="js/jquery.js"></script><script src="js/functions.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script><script>jQuery(window).on("load", function () {
+      }</style><body class="stretched block-nav-header"><div id="wrapper" class="fitsHeight"><header id="header" class="header-size-md"><div id="header-wrap" class="border-bottom-0"><div class="container position-relative"><div class="header-row justify-content-center"><div class="primary-menu-trigger"><button class="cnvs-hamburger" type="button" title="Open Mobile Menu">Menu <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span></button></div><nav class="primary-menu"><ul class="menu-container"><li class="menu-item current"><a class="menu-link" href="/"><div>Visit TradeDutyRefund.com</div></a><li class="menu-item"><a href class="menu-link" onclick="sharePresentation()"><div>Share This Presentation</div></a><li class="menu-item"><a class="menu-link" href="https://zcal.co/i/ipvlgNrr"><div>Schedule a discovery call</div></a><li class="menu-item"><a class="menu-link" href="https://www.linkedin.com/company/trade-duty-refund"><div>Follow us on LinkedIn</div></a></li><div class="morph-marker"></div></ul></nav></div></div></div><div class="header-wrap-clone"></div></header><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSEbN-x51HgNqkU2mUQ-Y-DLzrJBoXeznGZIG0UKTwtidgwsT4qw-eOpYCYV5kwZErFvF1jKi4IzwhC/embed?start=false&loop=false&delayms=60000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><script src="js/jquery.js"></script><script src="js/functions.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script><script defer="defer" src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.16/dist/cookieconsent.umd.js"></script><script>// Function to load the CDN script
+  function loadCDN(GDPR) {
+    var script = document.createElement('script');
+    script.src = GDPR ? "./js/cookieConsent/gdpr-config.js" : "./js/cookieConsent/row-config.js";
+    script.async = true;
+    document.body.appendChild(script);
+    script.onerror = function () {
+      console.error('Error loading CDN script.');
+    };
+  }
+
+  // Function to check if the user is in the EU
+  function checkEULocation() {
+    fetch('https://ipinfo.io/json')
+      .then(response => response.json())
+      .then(data => {
+        // Check if the country is in the EU
+        var euCountries = ['GB', 'AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GR', 'HR', 'HU', 'IE', 'IT', 'LT', 'LU', 'LV', 'MT', 'NL', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK'];
+        if (euCountries.includes(data.country)) {
+          loadCDN(true);
+        } else {
+          loadCDN()
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching IP information:', error);
+      });
+  }
+
+  // Check the user's location on page load
+  checkEULocation();</script><script>var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/6527b264eb150b3fb9a0a8bd/1hchh1m00';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();</script><script>jQuery(window).on("load", function () {
         jQuery(".primary-menu").each(function () {
           let menuEl = jQuery(this),
             marker = menuEl.find(".morph-marker"),
